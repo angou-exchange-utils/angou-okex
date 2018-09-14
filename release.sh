@@ -25,11 +25,12 @@ ask() {
     fi
 }
 
+git checkout -- setup.py
+
 if ! grep -qFx "VERSION = '$NEW_VERSION'" setup.py; then
     echo "Please update the VERSION variable in “setup.py” first."
     exit 1
 fi
-
 
 if ! T git checkout $RELEASE_BRANCH; then
     T git branch $RELEASE_BRANCH

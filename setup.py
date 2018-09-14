@@ -1,7 +1,7 @@
 from setuptools import setup
 
 
-VERSION = '3'
+VERSION = '1'
 
 
 setup(name='angou_okex',
